@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <script src="OSC.js"></script>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <canvas id="mycanvas" width="640" height="480"></canvas>
+            <script>
+                canvas = O("mycanvas");
+                context = canvas.getContext("2d");
+                S(canvas).background = "lightblue";
+                context.lineWidth = 2;
+                context.strokeStyle = "blue";
+                Math.degreesToRadians = function (degrees)
+                {
+                    return degrees * Math.PI / 180;
+                };
+                arcs =
+                        [
+                            Math.PI,
+                            Math.PI * 2,
+                            Math.PI / 2,
+                            Math.PI / 180 * 59
+                        ];
+                for (j = 0; j < 4; ++j)
+                {
+                    context.beginPath();
+                    context.arc(80 + j * 160, 80, 70, 0, arcs[j]);
+                    context.closePath();
+                    context.stroke();
+                }
+                context.strokeStyle = "red";
+                for (j = 0; j < 4; ++j)
+                {
+                    context.beginPath();
+                    context.arc(80 + j * 160, 240, 70, 0, arcs[j]);
+                    context.stroke();
+                    context.closePath();
+                }
+                context.strokeStyle = "green";
+                for (j = 0; j < 4; ++j)
+                {
+                    context.beginPath();
+                    context.arc(80 + j * 160, 400, 70, 0, arcs[j], true);
+                    context.stroke();
+                    context.closePath();
+                }
+            </script>
+        </div>
+    </body>
+</html>

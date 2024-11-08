@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <script src="OSC.js"></script>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <canvas id="mycanvas" width="500" height="280"></canvas>
+            <script>
+                canvas = O("mycanvas");
+                context = canvas.getContext("2d");
+                S(canvas).background = "lightblue";
+                myimage = new Image();
+                myimage.src = "image.png";
+                myimage.onload = function ()
+                {
+                    for (j = 0; j < 4; ++j)
+                    {
+                        context.drawImage(myimage, 20 + j * 120, 20);
+                        context.rotate(Math.PI / 25);
+                    }
+                };
+            </script>
+        </div>
+    </body>
+</html>

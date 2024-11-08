@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <style>
+            div {
+                background: yellow;
+            }
+            .lineargrad {
+                background: linear-gradient(top, yellow, orange);
+                background: -moz-linear-gradient(top, yellow, orange);
+                background: -webkit-linear-gradient(top, yellow, orange);
+            }
+            .radialgrad {
+                background: radial-gradient(center, yellow, orange);
+                background: -moz-radial-gradient(center, yellow, orange);
+                background: -webkit-radial-gradient(center, yellow, orange);
+            }
+        </style>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            Black text<br>
+            on a yellow<br>
+            background</div>
+        <br>
+        <div class="lineargrad">
+            Black text<br>
+            on a yellow/orange<br>
+            linear gradient</div>
+        <br>
+        <div class="radialgrad">
+            Black text<br>
+            on a yellow/orange<br>
+            radial gradient</div>
+    </body>
+</html>

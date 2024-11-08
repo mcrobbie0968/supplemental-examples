@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+    <head>
+        <style>
+            .memo {
+            }
+        </style>
+        <title>PHP, MySQL and JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery-3.5.1.min.js"></script>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <ul class="memo">
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul>
+            <script>
+                $("li").parent().css("font-weight", "bold");
+                $("li").parent(".memo").css("list-style-type", "circle");
+            </script>
+        </div>
+    </body>
+</html>
